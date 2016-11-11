@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
+var path = require('path');
+var newsgen = require(path.join(__dirname,'..','app','main'))
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', newsgen.mainjob);
 
 module.exports = router;
